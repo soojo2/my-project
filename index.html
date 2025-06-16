@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 과제 관리 (정적 표시)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content-wrapper">
+                <div class="header-text">
+                    <h1>📚 나의 과제 관리</h1>
+                    <p>내 과제 관리용</p>
+                </div>
+                <button type="button" class="add-task-button-static">
+                    <span class="icon-placeholder-text">+</span> 새 과제 추가
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content-area">
+            <!-- Stats Cards Section -->
+            <section class="stats-cards-section">
+                <div class="stat-card-item">
+                    <div class="stat-info">
+                        <p class="stat-label-text">전체 과제</p>
+                        <p class="stat-value-text">2</p>
+                    </div>
+                    <div class="stat-icon-container">
+                        <span class="icon-placeholder-text">📅</span>
+                    </div>
+                </div>
+                <div class="stat-card-item">
+                    <div class="stat-info">
+                        <p class="stat-label-text">완료됨</p>
+                        <p class="stat-value-text">0</p>
+                    </div>
+                    <div class="stat-icon-container">
+                        <span class="icon-placeholder-text">✔️</span>
+                    </div>
+                </div>
+                <div class="stat-card-item">
+                    <div class="stat-info">
+                        <p class="stat-label-text">진행 중</p>
+                        <p class="stat-value-text">2</p>
+                    </div>
+                    <div class="stat-icon-container">
+                        <span class="icon-placeholder-text">⏰</span>
+                    </div>
+                </div>
+                <div class="stat-card-item">
+                    <div class="stat-info">
+                        <p class="stat-label-text">지연됨</p>
+                        <p class="stat-value-text">0</p>
+                    </div>
+                    <div class="stat-icon-container">
+                        <span class="icon-placeholder-text">⚠️</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <div class="filter-control search-control">
+                    <span class="icon-placeholder-text filter-icon">🔍</span>
+                    <input type="text" placeholder="과제 검색..." value="" readonly class="filter-input-static">
+                </div>
+                <div class="filter-control">
+                    <select disabled class="filter-select-static">
+                        <option>모든 우선순위</option>
+                        <option>높음</option>
+                        <option>보통</option>
+                        <option>낮음</option>
+                    </select>
+                </div>
+                <div class="filter-control">
+                    <select disabled class="filter-select-static">
+                        <option>모든 상태</option>
+                        <option>진행 중</option>
+                        <option>완료됨</option>
+                    </select>
+                </div>
+                <div class="filter-control filter-summary">
+                    <span class="icon-placeholder-text filter-icon">📊</span>
+                    <span class="filter-summary-text">2개의 과제</span>
+                </div>
+            </section>
+
+            <!-- Task List Section -->
+            <section class="task-list-section">
+                <!-- Task 1 (Example Data) -->
+                <article class="task-item-card">
+                    <div class="task-content-wrapper">
+                        <div class="task-status-toggle">
+                            <span class="icon-placeholder-text">⚪</span>
+                        </div>
+                        <div class="task-information">
+                            <div class="task-header">
+                                <h3 class="task-title-text">React 프로젝트 완성하기</h3>
+                                <span class="task-tag priority-high-tag">높음</span>
+                                <span class="task-tag category-tag">개발</span>
+                            </div>
+                            <p class="task-description-text">Todo 앱의 UI/UX 개선 및 기능 추가</p>
+                            <div class="task-metadata">
+                                <span class="icon-placeholder-text meta-icon">📅</span>
+                                <span class="meta-text">마감일: 2025-06-20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-actions-group">
+                        <button type="button" class="action-button-static" aria-label="수정"><span class="icon-placeholder-text">✏️</span></button>
+                        <button type="button" class="action-button-static" aria-label="삭제"><span class="icon-placeholder-text">🗑️</span></button>
+                    </div>
+                </article>
+
+                <!-- Task 2 (Example Data) -->
+                <article class="task-item-card">
+                    <div class="task-content-wrapper">
+                        <div class="task-status-toggle">
+                            <span class="icon-placeholder-text">⚪</span>
+                        </div>
+                        <div class="task-information">
+                            <div class="task-header">
+                                <h3 class="task-title-text">수학 과제 제출</h3>
+                                <span class="task-tag priority-medium-tag">보통</span>
+                                <span class="task-tag category-tag">학습</span>
+                            </div>
+                            <p class="task-description-text">미적분학 문제 20개 풀이</p>
+                            <div class="task-metadata">
+                                <span class="icon-placeholder-text meta-icon">📅</span>
+                                <span class="meta-text">마감일: 2025-06-18</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-actions-group">
+                        <button type="button" class="action-button-static" aria-label="수정"><span class="icon-placeholder-text">✏️</span></button>
+                        <button type="button" class="action-button-static" aria-label="삭제"><span class="icon-placeholder-text">🗑️</span></button>
+                    </div>
+                </article>
+
+                <!-- Placeholder for No Tasks (Uncomment if needed) -->
+                <!--
+                <div class="no-tasks-placeholder">
+                    <span class="icon-placeholder-text no-task-display-icon">📄</span>
+                    <h3>표시할 과제가 없습니다.</h3>
+                    <p>새로운 과제를 추가해보세요!</p>
+                </div>
+                -->
+            </section>
+        </main>
+
+        <footer class="app-footer-bar">
+            <p>© <span id="currentYear"></span> 나의 과제 관리</p>
+        </footer>
+    </div>
+
+    <!-- Simple script to set current year, optional -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
